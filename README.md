@@ -50,13 +50,7 @@ I design and build maintainable test automation frameworks that help teams impro
 - **Admin**: User management, organization settings, search/filter
 - **Leave**: Leave list, assign leave, date validation
 
-```bash
-# Run tests
-cd qa-ui-automation-cypress && npm test
-
-# Run in Docker
-docker build -t cypress-tests . && docker run cypress-tests
-```
+TBC.
 
 ---
 
@@ -77,16 +71,7 @@ docker build -t cypress-tests . && docker run cypress-tests
 - **Store**: Order placement, inventory check
 - **User**: User management operations
 
-```bash
-# Run all tests
-cd qa-api-automation-newman && npm test
-
-# Run smoke tests only
-npm run test:smoke
-
-# Run with HTML report
-npm run test:report
-```
+TBC.
 
 ---
 
@@ -105,15 +90,7 @@ npm run test:report
 - **Test Reports**: Metrics, execution summary, defect tracking
 
 ```
-qa-manual-testing/qa-test-design/
-├── API/
-│   ├── test-cases.md             # 20 API test cases
-│   ├── test-plan.md              # API test strategy
-│   └── test-report-template.md    # Reusable report template
-└── E2E/
-    ├── test-cases.md             # 18 OrangeHRM test cases
-    ├── test-plan.md              # E2E test strategy
-    └── test-report-template.md    # Reusable report template
+TBC.
 ```
 
 ---
@@ -121,23 +98,7 @@ qa-manual-testing/qa-test-design/
 ## Project Statistics
 
 ```
-+------------------------------------------------------------------+
-|                                                                  |
-|  Cypress UI Tests    ████████████████████  18 Test Cases      |
-|  Admin Module        ████████████████████   5 Tests           |
-|  Dashboard Module    ████████████████       4 Tests           |
-|  Leave Module        ████████████████       4 Tests           |
-|  Login Module        ████████████████████   5 Tests           |
-|                                                                  |
-|  API Tests           ████████████████████  20 Test Cases      |
-|  Assertions          ████████████████████  45 Assertions      |
-|  Smoke Tests         ██                      2 Tests           |
-|  Regression Tests    ████████████████      13 Tests           |
-|  Negative Tests      ██████████              5 Tests           |
-|                                                                  |
-|  Manual QA Docs      ████████████████████   6 Documents        |
-|                                                                  |
-+------------------------------------------------------------------+
+TBC.
 ```
 
 ---
@@ -150,14 +111,14 @@ qa-manual-testing/qa-test-design/
 | ![Cypress](https://img.shields.io/badge/-Cypress-brightgreen?style=flat-square&logo=cypress) | End-to-End Testing |
 | ![Postman](https://img.shields.io/badge/-Postman-orange?style=flat-square&logo=postman) | API Testing |
 | ![Newman](https://img.shields.io/badge/-Newman-green?style=flat-square&logo=npm) | CLI Test Runner |
-| ![Selenium](https://img.shields.io/badge/-Selenium-green?style=flat-square&logo=selenium) | Web Automation |
+
 
 ### DevOps & CI
 | | |
 |---|---|
 | ![Jenkins](https://img.shields.io/badge/-Jenkins-red?style=flat-square&logo=jenkins) | CI/CD Pipeline |
 | ![Docker](https://img.shields.io/badge/-Docker-blue?style=flat-square&logo=docker) | Containerization |
-| ![GitHub Actions](https://img.shields.io/badge/-GitHub%20Actions-purple?style=flat-square&logo=github) | CI Automation |
+
 
 ### Documentation & APIs
 | | |
@@ -168,8 +129,7 @@ qa-manual-testing/qa-test-design/
 ### Languages
 | | |
 |---|---|
-| ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow?style=flat-square&logo=javascript) | Primary Language |
-| ![Python](https://img.shields.io/badge/-Python-blue?style=flat-square&logo=python) | Scripting |
+| ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow?style=flat-square&logo=javascript) | 
 
 ---
 
@@ -207,18 +167,7 @@ qa-portfolio/
 |
 +-- qa-ui-automation-cypress/           # Cypress E2E Tests
 |   +-- cypress/
-|   |   +-- e2e/orange-hr-system/       # Test scenarios (18 cases)
-|   |   +-- pages/                      # Page Objects
-|   |   +-- support/                    # Custom commands
-|   |   +-- fixtures/                    # Test data
-|   |   +-- screenshots/                 # Failure screenshots
-|   |   +-- videos/                      # Test videos
-|   +-- cypress.config.js                # Cypress config
-|   +-- Dockerfile                       # Docker setup
-|   +-- Jenkinsfile                      # CI/CD pipeline
-|   +-- README.md                        # Detailed docs
-|   +-- package.json
-|
+
 +-- qa-api-automation-newman/            # Postman/Newman API Tests
 |   +-- collections/
 |   |   +-- PetStoreAPI.postman_collection.json  # 20 test cases
@@ -234,39 +183,9 @@ qa-portfolio/
 |   +-- package.json
 |
 +-- qa-manual-testing/                   # Manual QA Documentation
-|   +-- qa-test-design/
-|       +-- API/
-|       |   +-- test-cases.md            # 20 API test cases
-|       |   +-- test-plan.md             # API test plan
-|       |   +-- test-report-template.md  # Report template
-|       +-- E2E/
-|       |   +-- test-cases.md            # 18 E2E test cases
-|       |   +-- test-plan.md             # E2E test plan
-|       |   +-- test-report-template.md  # Report template
+
 ```
 
 ---
 
-## Let's Connect
 
-<p align="center">
-  <a href="mailto:saennara@email.com">
-    <img src="https://img.shields.io/badge/Email-saennara@email.com-red?style=for-the-badge&logo=gmail" alt="Email">
-  </a>
-  <a href="https://linkedin.com/in/saennara">
-    <img src="https://img.shields.io/badge/LinkedIn-Saennara-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn">
-  </a>
-  <a href="https://github.com/saennara">
-    <img src="https://img.shields.io/badge/GitHub-Saennara-black?style=for-the-badge&logo=github" alt="GitHub">
-  </a>
-</p>
-
----
-
-<div align="center">
-
-**View my projects and let's discuss how I can contribute to your team!**
-
-*Built with passion for quality assurance*
-
-</div>
