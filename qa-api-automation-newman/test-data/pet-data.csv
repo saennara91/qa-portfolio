@@ -1,0 +1,6 @@
+petId,petName,categoryName,status,quantity
+1001,Buddy,Dogs,available,2
+1002,Max,Cats,available,1
+1003,Bella,Dogs,pending,3
+1004,Luna,Cats,available,2
+1005,Charlie,Dogs,sold,1

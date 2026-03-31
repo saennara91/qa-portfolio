@@ -1,0 +1,27 @@
+{
+  "name": "qa-ui-automation-cypress",
+  "version": "1.0.0",
+  "description": "Professional Cypress UI Automation Framework for QA Portfolio",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:headed": "cypress run --headed",
+    "test:chrome": "cypress run --browser chrome",
+    "test:headed:chrome": "cypress run --browser chrome --headed",
+    "open": "cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "automation",
+    "qa",
+    "testing",
+    "e2e",
+    "ui-testing"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.6.0",
+    "eslint": "^8.56.0"
+  }
+}

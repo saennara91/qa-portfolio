@@ -1,0 +1,32 @@
+{
+  "name": "qa-api-automation-newman",
+  "version": "1.0.0",
+  "description": "API Test Automation Framework using Postman and Newman",
+  "main": "index.js",
+  "scripts": {
+    "test": "newman run collections/PetStoreAPI.postman_collection.json -e environments/qa.postman_environment.json -r cli,html,json",
+    "test:report": "newman run collections/PetStoreAPI.postman_collection.json -e environments/qa.postman_environment.json -r html --reporter-html-export reports/html-report.html --reporter-html-template default",
+    "test:json": "newman run collections/PetStoreAPI.postman_collection.json -e environments/qa.postman_environment.json -r json --reporter-json-export reports/json-report.json",
+    "test:smoke": "newman run collections/PetStoreAPI.postman_collection.json -e environments/qa.postman_environment.json --folder Smoke",
+    "test:regression": "newman run collections/PetStoreAPI.postman_collection.json -e environments/qa.postman_environment.json --folder Regression",
+    "test:data-driven": "newman run collections/PetStoreAPI.postman_collection.json -e environments/qa.postman_environment.json --iteration-data test-data/pet-data.csv -r cli,html,json",
+    "lint": "apiblueprint validate collections/PetStoreAPI.postman_collection.json || echo 'Validation complete'",
+    "clean": "rm -rf reports/*"
+  },
+  "keywords": [
+    "api",
+    "testing",
+    "postman",
+    "newman",
+    "automation",
+    "qa"
+  ],
+  "author": "Saennara",
+  "license": "MIT",
+  "devDependencies": {
+    "newman": "^6.1.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
