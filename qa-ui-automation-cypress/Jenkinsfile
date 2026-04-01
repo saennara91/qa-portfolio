@@ -1,0 +1,66 @@
+pipeline {
+  agent any
+  tools {
+    nodejs 'nodejs18.19.0'
+    }
+  parameters {
+    choice(name: 'TEST_SCRIPT', choices: [
+      'test',
+      'test:chrome'
+    ], description: 'Select which script to run')
+  }
+
+  environment {
+    CYPRESS_CACHE_FOLDER = '~/.cache/Cypress'
+    JAVA_OPTS = "-Dorg.jenkinsci.plugins.durabletask.BourneShellScript.HEARTBEAT_CHECK_INTERVAL=86400"
+  }
+
+  stages {
+    stage('Checkout') {
+      steps {
+        checkout scm
+      }
+    }
+    stage('Cache Dependencies') {
+      steps {
+        script {
+          if (fileExists('node_modules')) {
+            echo 'Reusing cached node_modules'
+          } else {
+            echo 'Installing dependencies...'
+            sh 'npm ci'
+          }
+
+          if (!fileExists('.cache/Cypress')) {
+            echo 'Installing Cypress binary...'
+            sh 'npx cypress install'
+          }
+        }
+      }
+    }
+    stage('Check NodeJS') {
+      steps {
+        sh 'node -v && npm -v && npx cypress --version'
+      }
+    }
+
+    stage('Run Cypress E2E') {
+      steps {
+        echo 'Automate Test Start...'
+        sh 'npm ci'
+        sh "npm run ${params.TEST_SCRIPT}"
+      }
+    }   
+  }
+  post {
+    success {
+      echo '🎉 Test passed successfully!'
+    }
+    failure {
+      echo '❌ Test failed!'
+    }
+    always {
+      echo '📦 Pipeline execution finished.'
+    }
+  }
+}
