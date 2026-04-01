@@ -1,0 +1,29 @@
+services:
+  jenkins:
+    build: .
+    container_name: jenkins-ui-demo-testing
+    privileged: true
+    user: root
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
+
+  cypress:
+    image: cypress/included:14.5.4
+    container_name: cypress
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["tail -f /dev/null"]
+    working_dir: /e2e
+    volumes:
+      - .:/e2e
+    
+    restart: unless-stopped
+
+volumes:
+  jenkins_home:
+

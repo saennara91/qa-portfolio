@@ -5,7 +5,6 @@ USER root
 # Install required packages for:
 RUN apt-get update && apt-get install -y \
     docker.io \
-    docker-compose-v2 \
     libgtk2.0-0 \
     libgtk-3-0 \
     libgbm-dev \
@@ -19,6 +18,10 @@ RUN apt-get update && apt-get install -y \
     curl \
     unzip \
     && rm -rf /var/lib/apt/lists/*
+
+RUN curl -fsSL https://github.com/docker/compose/releases/download/v2.24.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose && \
+    chmod +x /usr/local/bin/docker-compose && \
+    ln -s /usr/local/bin/docker-compose /usr/libexec/docker/cli-plugins/docker-compose || true
 
 # Docker socket permission inside container
 RUN chmod 666 /var/run/docker.sock || true
