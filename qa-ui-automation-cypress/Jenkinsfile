@@ -1,12 +1,11 @@
 pipeline {
   agent any
   tools {
-    nodejs 'nodejs18.19.0'
+    nodejs 'nodejs'
     }
   parameters {
     choice(name: 'TEST_SCRIPT', choices: [
-      'test',
-      'test:chrome'
+      'test'
     ], description: 'Select which script to run')
   }
 
