@@ -50,8 +50,6 @@ I design and build maintainable test automation frameworks that help teams impro
 - **Admin**: User management, organization settings, search/filter
 - **Leave**: Leave list, assign leave, date validation
 
-TBC.
-
 ---
 
 ### 2. Postman/Newman API Automation Framework
@@ -71,8 +69,6 @@ TBC.
 - **Store**: Order placement, inventory check
 - **User**: User management operations
 
-TBC.
-
 ---
 
 ### 3. Manual QA Documentation
@@ -90,7 +86,15 @@ TBC.
 - **Test Reports**: Metrics, execution summary, defect tracking
 
 ```
-TBC.
+qa-manual-testing/qa-test-design/
+├── API/
+│   ├── test-cases.md             # 20 API test cases
+│   ├── test-plan.md              # API test strategy
+│   └── test-report-template.md    # Reusable report template
+└── E2E/
+    ├── test-cases.md             # 18 OrangeHRM test cases
+    ├── test-plan.md              # E2E test strategy
+    └── test-report-template.md    # Reusable report template
 ```
 
 ---
@@ -98,7 +102,23 @@ TBC.
 ## Project Statistics
 
 ```
-TBC.
++------------------------------------------------------------------+
+|                                                                  |
+|  Cypress UI Tests    ████████████████████  18 Test Cases      |
+|  Admin Module        ████████████████████   5 Tests           |
+|  Dashboard Module    ████████████████       4 Tests           |
+|  Leave Module        ████████████████       4 Tests           |
+|  Login Module        ████████████████████   5 Tests           |
+|                                                                  |
+|  API Tests           ████████████████████  20 Test Cases      |
+|  Assertions          ████████████████████  45 Assertions      |
+|  Smoke Tests         ██                      2 Tests           |
+|  Regression Tests    ████████████████      13 Tests           |
+|  Negative Tests      ██████████              5 Tests           |
+|                                                                  |
+|  Manual QA Docs      ████████████████████   6 Documents        |
+|                                                                  |
++------------------------------------------------------------------+
 ```
 
 ---
@@ -162,12 +182,23 @@ Comprehensive reporting
 
 ## Project Structure
 
+
 ```
 qa-portfolio/
 |
 +-- qa-ui-automation-cypress/           # Cypress E2E Tests
 |   +-- cypress/
-
+|   |   +-- e2e/orange-hr-system/       # Test scenarios (18 cases)
+|   |   +-- pages/                      # Page Objects
+|   |   +-- support/                    # Custom commands
+|   |   +-- fixtures/                    # Test data
+|   |   +-- screenshots/                 # Failure screenshots
+|   +-- cypress.config.js                # Cypress config
+|   +-- Dockerfile                       # Docker setup
+|   +-- Jenkinsfile                      # CI/CD pipeline
+|   +-- README.md                        # Detailed docs
+|   +-- package.json
+|
 +-- qa-api-automation-newman/            # Postman/Newman API Tests
 |   +-- collections/
 |   |   +-- PetStoreAPI.postman_collection.json  # 20 test cases
@@ -176,14 +207,42 @@ qa-portfolio/
 |   +-- test-data/
 |   |   +-- pet-data.csv                 # Data-driven test data
 |   +-- reports/
-|   |   +-- html-report.html             # HTML report
 |   |   +-- json-report.json             # JSON report
 |   +-- NewmanConfiguration.md            # Newman options
 |   +-- README.md                         # Detailed docs
 |   +-- package.json
 |
 +-- qa-manual-testing/                   # Manual QA Documentation
-
+|   +-- qa-test-design/
+|       +-- API/
+|       |   +-- test-cases.md            # 20 API test cases
+|       |   +-- test-plan.md             # API test plan
+|       |   +-- test-report-template.md  # Report template
+|       +-- E2E/
+|       |   +-- test-cases.md            # 18 E2E test cases
+|       |   +-- test-plan.md             # E2E test plan
+|       |   +-- test-report-template.md  # Report template
 ```
 
 ---
+
+## Let's Connect
+
+<p align="center">
+  <a href="mailto:saennara91@gmail.com">
+    <img src="https://img.shields.io/badge/Email-saennara91@gmail.com-red?style=for-the-badge&logo=gmail" alt="Email">
+  </a>
+  <a href="https://github.com/saennara91">
+    <img src="https://img.shields.io/badge/GitHub-Saennara-black?style=for-the-badge&logo=github" alt="GitHub">
+  </a>
+</p>
+
+---
+
+<div align="center">
+
+**View my projects and let's discuss how I can contribute to your team!**
+
+*Built with passion for quality assurance*
+
+</div>
