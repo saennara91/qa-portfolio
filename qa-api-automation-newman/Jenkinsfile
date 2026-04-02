@@ -2,8 +2,8 @@ pipeline {
     agent any
     
     environment {
-        COLLECTION_FILE = 'postman/QA_API_Automation.postman_collection.json'
-        ENVIRONMENT_FILE = 'postman/QA.postman_environment.json'
+        COLLECTION_FILE = 'collections/PetStoreAPI.postman_collection.json'
+        ENVIRONMENT_FILE = 'environments/qa.postman_environment.json'
         REPORT_DIR = 'newman-reports'
     }
     
@@ -23,12 +23,13 @@ pipeline {
         stage('Run Newman Tests') {
             steps {
                 sh '''
+                    mkdir -p ${REPORT_DIR}
                     newman run ${COLLECTION_FILE} \
                         -e ${ENVIRONMENT_FILE} \
                         -r cli,html,json,junit \
-                        --reporter-html-template postman/reporter.hbs \
                         --reporter-junit-export ${REPORT_DIR}/results.xml \
-                        --reporter-json-export ${REPORT_DIR}/results.json
+                        --reporter-json-export ${REPORT_DIR}/results.json \
+                        --reporter-html-export ${REPORT_DIR}/html/report.html
                 '''
             }
         }
