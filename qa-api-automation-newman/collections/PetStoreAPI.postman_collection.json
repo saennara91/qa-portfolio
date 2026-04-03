@@ -12,7 +12,7 @@
       "name": "Smoke Tests",
       "item": [
         {
-          "name": "TC-01: Health Check",
+          "name": "TC-API-001: Health Check Endpoint",
           "event": [
             {
               "listen": "test",
@@ -98,7 +98,7 @@
           "response": []
         },
         {
-          "name": "TC-02: Find Pet By Status - Available",
+          "name": "TC-API-002: Find Available Pets",
           "event": [
             {
               "listen": "test",
@@ -161,7 +161,7 @@
       "name": "Regression Tests",
       "item": [
         {
-          "name": "TC-03: Add New Pet",
+          "name": "TC-API-003: Create New Pet",
           "event": [
             {
               "listen": "test",
@@ -226,7 +226,7 @@
           "response": []
         },
         {
-          "name": "TC-04: Get Pet By ID",
+          "name": "TC-API-004: Get Pet by ID",
           "event": [
             {
               "listen": "test",
@@ -273,7 +273,7 @@
           "response": []
         },
         {
-          "name": "TC-05: Update Pet",
+          "name": "TC-API-005: Update Pet",
           "event": [
             {
               "listen": "test",
@@ -321,7 +321,7 @@
           "response": []
         },
         {
-          "name": "TC-06: Delete Pet",
+          "name": "TC-API-006: Delete Pet",
           "event": [
             {
               "listen": "test",
@@ -370,7 +370,7 @@
           "response": []
         },
         {
-          "name": "TC-07: Find Pets By Status - Pending",
+          "name": "TC-API-007: Find Pets By Status - Pending",
           "event": [
             {
               "listen": "test",
@@ -424,7 +424,7 @@
           "response": []
         },
         {
-          "name": "TC-08: Place Order",
+          "name": "TC-API-008: Place Order",
           "event": [
             {
               "listen": "test",
@@ -480,7 +480,7 @@
           "response": []
         },
         {
-          "name": "TC-09: Get Order By ID",
+          "name": "TC-API-009: Get Order By ID",
           "event": [
             {
               "listen": "test",
@@ -520,7 +520,7 @@
           "response": []
         },
         {
-          "name": "TC-10: Delete Order",
+          "name": "TC-API-010: Delete Order",
           "event": [
             {
               "listen": "test",
@@ -560,7 +560,7 @@
           "response": []
         },
         {
-          "name": "TC-11: Get Store Inventory",
+          "name": "TC-API-011: Get Store Inventory",
           "event": [
             {
               "listen": "test",
@@ -605,7 +605,7 @@
           "response": []
         },
         {
-          "name": "TC-12: Create User",
+          "name": "TC-API-012: Create User",
           "event": [
             {
               "listen": "test",
@@ -665,7 +665,7 @@
           "response": []
         },
         {
-          "name": "TC-13: Get User By Username",
+          "name": "TC-API-013: Get User By Username",
           "event": [
             {
               "listen": "test",
@@ -706,7 +706,7 @@
           "response": []
         },
         {
-          "name": "TC-14: Update User",
+          "name": "TC-API-014: Update User",
           "event": [
             {
               "listen": "test",
@@ -754,7 +754,7 @@
           "response": []
         },
         {
-          "name": "TC-15: Delete User",
+          "name": "TC-API-015: Delete User",
           "event": [
             {
               "listen": "test",
@@ -798,7 +798,7 @@
       "name": "Negative Tests",
       "item": [
         {
-          "name": "TC-16: Get Non-existent Pet",
+          "name": "TC-API-016: Get Non-existent Pet",
           "event": [
             {
               "listen": "test",
@@ -837,7 +837,7 @@
           "response": []
         },
         {
-          "name": "TC-17: Invalid Pet ID Format",
+          "name": "TC-API-017: Invalid Pet ID Format",
           "event": [
             {
               "listen": "test",
@@ -871,7 +871,7 @@
           "response": []
         },
         {
-          "name": "TC-18: Create User Without Required Fields",
+          "name": "TC-API-018: Create User - Missing Required Fields",
           "event": [
             {
               "listen": "test",
@@ -913,7 +913,7 @@
           "response": []
         },
         {
-          "name": "TC-19: Get Non-existent Order",
+          "name": "TC-API-019: Get Non-existent Order",
           "event": [
             {
               "listen": "test",
@@ -948,7 +948,7 @@
           "response": []
         },
         {
-          "name": "TC-20: Delete Non-existent User",
+          "name": "TC-API-020: Delete Non-existent User",
           "event": [
             {
               "listen": "test",

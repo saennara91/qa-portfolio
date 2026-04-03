@@ -134,34 +134,34 @@ npx newman run collections/PetStoreAPI.postman_collection.json --help
 ### Smoke Tests (2 Tests)
 | Test ID | Description | Method | Expected Result |
 |---------|-------------|--------|-----------------|
-| TC-01 | Health Check | GET | 200 OK, response time < 1s |
-| TC-02 | Find Pet by Status | GET | 200 OK, array of available pets |
+| TC-API-001 | Health Check | GET | 200 OK, response time < 1s |
+| TC-API-002 | Find Pet by Status | GET | 200 OK, array of available pets |
 
 ### Regression Tests (13 Tests)
 | Test ID | Description | Method | Expected Result |
 |---------|-------------|--------|-----------------|
-| TC-03 | Add New Pet | POST | 200 OK, pet created |
-| TC-04 | Get Pet by ID | GET | 200 OK, pet details |
-| TC-05 | Update Pet | PUT | 200 OK, pet updated |
-| TC-06 | Delete Pet | DELETE | 200 OK, pet deleted |
-| TC-07 | Find Pets by Status | GET | 200 OK, pending pets |
-| TC-08 | Place Order | POST | 200 OK, order placed |
-| TC-09 | Get Order by ID | GET | 200 OK, order details |
-| TC-10 | Delete Order | DELETE | 200 OK, order deleted |
-| TC-11 | Get Store Inventory | GET | 200 OK, inventory object |
-| TC-12 | Create User | POST | 200 OK, user created |
-| TC-13 | Get User | GET | 200 OK, user details |
-| TC-14 | Update User | PUT | 200 OK, user updated |
-| TC-15 | Delete User | DELETE | 200 OK, user deleted |
+| TC-API-003 | Add New Pet | POST | 200 OK, pet created |
+| TC-API-004 | Get Pet by ID | GET | 200 OK, pet details |
+| TC-API-005 | Update Pet | PUT | 200 OK, pet updated |
+| TC-API-006 | Delete Pet | DELETE | 200 OK, pet deleted |
+| TC-API-007 | Find Pets by Status | GET | 200 OK, pending pets |
+| TC-API-008 | Place Order | POST | 200 OK, order placed |
+| TC-API-009 | Get Order by ID | GET | 200 OK, order details |
+| TC-API-010 | Delete Order | DELETE | 200 OK, order deleted |
+| TC-API-011 | Get Store Inventory | GET | 200 OK, inventory object |
+| TC-API-012 | Create User | POST | 200 OK, user created |
+| TC-API-013 | Get User | GET | 200 OK, user details |
+| TC-API-014 | Update User | PUT | 200 OK, user updated |
+| TC-API-015 | Delete User | DELETE | 200 OK, user deleted |
 
 ### Negative Tests (5 Tests)
 | Test ID | Description | Method | Expected Result |
 |---------|-------------|--------|-----------------|
-| TC-16 | Get Non-existent Pet | GET | 404 Not Found |
-| TC-17 | Invalid Pet ID Format | GET | 4xx/5xx Error |
-| TC-18 | Create User - Missing Fields | POST | 4xx/5xx Error |
-| TC-19 | Get Non-existent Order | GET | 404 Not Found |
-| TC-20 | Delete Non-existent User | DELETE | 404/5xx Error |
+| TC-API-016 | Get Non-existent Pet | GET | 404 Not Found |
+| TC-API-017 | Invalid Pet ID Format | GET | 4xx/5xx Error |
+| TC-API-018 | Create User - Missing Fields | POST | 4xx/5xx Error |
+| TC-API-019 | Get Non-existent Order | GET | 404 Not Found |
+| TC-API-020 | Delete Non-existent User | DELETE | 404/5xx Error |
 
 ---
 
