@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "5cb819a0-ed59-4754-90bc-ecd9b83f30d2",
-    "name": "PetStore API Test Collection",
+    "name": "PetStore API Test Collection Original",
     "description": "API Test Automation for PetStore Swagger API - Demonstrates comprehensive API testing skills",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "51222033",
@@ -12,7 +12,7 @@
       "name": "Smoke Tests",
       "item": [
         {
-          "name": "TC-API-001: Health Check Endpoint",
+          "name": "TC-01: Health Check",
           "event": [
             {
               "listen": "test",
@@ -98,7 +98,7 @@
           "response": []
         },
         {
-          "name": "TC-API-002: Find Available Pets",
+          "name": "TC-02: Find Pet By Status - Available",
           "event": [
             {
               "listen": "test",
@@ -161,7 +161,7 @@
       "name": "Regression Tests",
       "item": [
         {
-          "name": "TC-API-003: Create New Pet",
+          "name": "TC-03: Add New Pet",
           "event": [
             {
               "listen": "test",
@@ -226,7 +226,7 @@
           "response": []
         },
         {
-          "name": "TC-API-004: Get Pet by ID",
+          "name": "TC-04: Get Pet By ID",
           "event": [
             {
               "listen": "test",
@@ -273,7 +273,7 @@
           "response": []
         },
         {
-          "name": "TC-API-005: Update Pet",
+          "name": "TC-05: Update Pet",
           "event": [
             {
               "listen": "test",
@@ -321,7 +321,7 @@
           "response": []
         },
         {
-          "name": "TC-API-006: Delete Pet",
+          "name": "TC-06: Delete Pet",
           "event": [
             {
               "listen": "test",
@@ -370,7 +370,7 @@
           "response": []
         },
         {
-          "name": "TC-API-007: Find Pets By Status - Pending",
+          "name": "TC-07: Find Pets By Status - Pending",
           "event": [
             {
               "listen": "test",
@@ -424,7 +424,7 @@
           "response": []
         },
         {
-          "name": "TC-API-008: Place Order",
+          "name": "TC-08: Place Order",
           "event": [
             {
               "listen": "test",
@@ -480,7 +480,7 @@
           "response": []
         },
         {
-          "name": "TC-API-009: Get Order By ID",
+          "name": "TC-09: Get Order By ID",
           "event": [
             {
               "listen": "test",
@@ -520,7 +520,7 @@
           "response": []
         },
         {
-          "name": "TC-API-010: Delete Order",
+          "name": "TC-10: Delete Order",
           "event": [
             {
               "listen": "test",
@@ -560,7 +560,7 @@
           "response": []
         },
         {
-          "name": "TC-API-011: Get Store Inventory",
+          "name": "TC-11: Get Store Inventory",
           "event": [
             {
               "listen": "test",
@@ -605,7 +605,7 @@
           "response": []
         },
         {
-          "name": "TC-API-012: Create User",
+          "name": "TC-12: Create User",
           "event": [
             {
               "listen": "test",
@@ -649,7 +649,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"id\": {{newUserId}},\n    \"username\": \"testuser{{newUserId}}\",\n    \"firstName\": \"Test\",\n    \"lastName\": \"User\",\n    \"email\": \"{{userEmail}}\",\n    \"password\": \"password123\",\n    \"phone\": \"1234567890\",\n    \"userStatus\": 1\n}"
+              "raw": "{\n    \"username\": \"testuser\",\n    \"firstName\": \"Test\",\n    \"lastName\": \"User\",\n    \"email\": \"{{$randomEmail}}\",\n    \"password\": \"password123\",\n    \"phone\": \"1234567890\",\n    \"userStatus\": 1\n}"
             },
             "url": {
               "raw": "{{baseUrl}}/user",
@@ -665,7 +665,7 @@
           "response": []
         },
         {
-          "name": "TC-API-013: Get User By Username",
+          "name": "TC-13: Get User By Username",
           "event": [
             {
               "listen": "test",
@@ -706,7 +706,7 @@
           "response": []
         },
         {
-          "name": "TC-API-014: Update User",
+          "name": "TC-14: Update User",
           "event": [
             {
               "listen": "test",
@@ -754,7 +754,7 @@
           "response": []
         },
         {
-          "name": "TC-API-015: Delete User",
+          "name": "TC-15: Delete User",
           "event": [
             {
               "listen": "test",
@@ -798,7 +798,7 @@
       "name": "Negative Tests",
       "item": [
         {
-          "name": "TC-API-016: Get Non-existent Pet",
+          "name": "TC-16: Get Non-existent Pet",
           "event": [
             {
               "listen": "test",
@@ -837,7 +837,7 @@
           "response": []
         },
         {
-          "name": "TC-API-017: Invalid Pet ID Format",
+          "name": "TC-17: Invalid Pet ID Format",
           "event": [
             {
               "listen": "test",
@@ -871,7 +871,7 @@
           "response": []
         },
         {
-          "name": "TC-API-018: Create User - Missing Required Fields",
+          "name": "TC-18: Create User Without Required Fields",
           "event": [
             {
               "listen": "test",
@@ -913,7 +913,7 @@
           "response": []
         },
         {
-          "name": "TC-API-019: Get Non-existent Order",
+          "name": "TC-19: Get Non-existent Order",
           "event": [
             {
               "listen": "test",
@@ -948,7 +948,7 @@
           "response": []
         },
         {
-          "name": "TC-API-020: Delete Non-existent User",
+          "name": "TC-20: Delete Non-existent User",
           "event": [
             {
               "listen": "test",

@@ -24,7 +24,9 @@
   "author": "Saennara",
   "license": "MIT",
   "devDependencies": {
-    "newman": "^6.1.2"
+    "newman": "^6.1.2",
+    "newman-reporter-html": "^1.0.5",
+    "newman-reporter-htmlextra": "^2.2.4"
   },
   "engines": {
     "node": ">=18.0.0"
