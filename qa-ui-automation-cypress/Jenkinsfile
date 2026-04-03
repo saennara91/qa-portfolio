@@ -1,8 +1,6 @@
 pipeline {
   agent any
-  tools {
-    nodejs 'nodejs'
-    }
+
   parameters {
     choice(name: 'TEST_SCRIPT', choices: [
       'test'
@@ -20,7 +18,14 @@ pipeline {
         checkout scm
       }
     }
-    stage('Cache Dependencies') {
+    stage('Install Node.js') {
+      steps {
+        echo 'Checking Node.js installation...'
+        sh 'node --version || echo "Node.js not found"'
+        sh 'npm --version || echo "npm not found"'
+      }
+    }
+    stage('Install Dependencies') {
       steps {
         script {
           if (fileExists('node_modules')) {
@@ -37,7 +42,7 @@ pipeline {
         }
       }
     }
-    stage('Check NodeJS') {
+    stage('Check Versions') {
       steps {
         sh 'node -v && npm -v && npx cypress --version'
       }
@@ -45,21 +50,21 @@ pipeline {
 
     stage('Run Cypress E2E') {
       steps {
-        echo 'Automate Test Start...'
+        echo 'Starting Cypress E2E Tests...'
         sh 'npm ci'
-        sh "npm run ${params.TEST_SCRIPT}"
+        sh 'npx cypress run --browser electron'
       }
-    }   
+    }
   }
   post {
     success {
-      echo '🎉 Test passed successfully!'
+      echo 'Test passed successfully!'
     }
     failure {
-      echo '❌ Test failed!'
+      echo 'Test failed!'
     }
     always {
-      echo '📦 Pipeline execution finished.'
+      echo 'Pipeline execution finished.'
     }
   }
 }
